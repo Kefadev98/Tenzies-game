@@ -1,38 +1,86 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: -webkit-gradient(linear, left top, right top, from(#9292ee), to(#1070ac));
+  background: linear-gradient(to right, #9292ee, #1070ac);
+  padding: 20px;
+  font-family: 'Karla', sans-serif;
+}
+
+body main {
+  margin: 0 auto;
+  margin-top: 100px;
+  background-color: #F5F5F5;
+  height: 500px;
+  max-width: 600px;
+  border-radius: 5px;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+          box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+body main .title {
+  font-size: 3rem;
+  margin: 0;
+  color: #1070AC;
+}
+
+body main .instructions {
+  width: 70%;
+  font-size: 1.1rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  margin-top: 0;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body main .dice-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto auto;
+  -ms-grid-columns: (1fr)[5];
+      grid-template: auto auto/repeat(5, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+body main .roll-dice {
+  height: 50px;
+  width: 150px;
+  border: none;
+  border-radius: 6px;
+  background-color: #5035FF;
   color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: 'Karla', sans-serif;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+body main .roll-dice:focus {
+  outline: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body main .roll-dice:active {
+  -webkit-box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+          box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
 }
+/*# sourceMappingURL=App.css.map */
