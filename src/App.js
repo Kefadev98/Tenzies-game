@@ -7,8 +7,9 @@ import Confetti from "react-confetti"
 function App() {
 
   const [dice, setDice] = useState(allNewDice())
-    const [tenzies, setTenzies] = useState(false)
+  const [tenzies, setTenzies] = useState(false)
     
+
     useEffect(() => {
         const allHeld = dice.every(die => die.isHeld)
         const firstValue = dice[0].value
@@ -20,12 +21,12 @@ function App() {
 
     function generateNewDie() {
         return {
-            value: Math.ceil(Math.random() * 6),
+            value: Math.ceil(Math.random() * 6), 
             isHeld: false,
             id: nanoid()
         }
     }
-    
+
     function allNewDice() {
         const newDice = []
         for (let i = 0; i < 10; i++) {
@@ -46,7 +47,7 @@ function App() {
             setDice(allNewDice())
         }
     }
-    
+
     function holdDice(id) {
         setDice(oldDice => oldDice.map(die => {
             return die.id === id ? 
@@ -54,7 +55,7 @@ function App() {
                 die
         }))
     }
-    
+
     const diceElements = dice.map(die => (
         <Die 
             key={die.id} 
